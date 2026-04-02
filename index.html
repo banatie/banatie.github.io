@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>App Support</title>
+</head>
+<body>
+    <div id="ja" style="display:none;">
+        <h1>サポートページ</h1>
+        <p>お問い合わせは以下のフォームからお願いします。</p>
+        <a href="日本語用GoogleフォームURL">お問い合わせフォーム</a>
+    </div>
+    <div id="en" style="display:none;">
+        <h1>Support Page</h1>
+        <p>Please contact us using the form below.</p>
+        <a href="英語用GoogleフォームURL">Contact Form</a>
+    </div>
+
+    <script>
+        const lang = String(navigator.language).split('-')[0];
+        if (lang === 'ja') {
+            document.getElementById('ja').style.display = 'block';
+        } else {
+            document.getElementById('en').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
